@@ -4,9 +4,9 @@ __version__ = '1.0'
 """
 
 # Assign and input values
-day = int(input("Enter a day: "))
-month = int(input("Enter a month: "))
-year = int(input("Enter a year: "))
+day = int(input("Entrez un jour : "))
+month = int(input("Entrez un mois : "))
+year = int(input("Entrez une année : "))
 
 # Boolean flags to track errors
 flag_end: bool = False
