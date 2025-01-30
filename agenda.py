@@ -36,7 +36,16 @@ if month != 2: # all other months without february
         else:
                 flag = False # l'utilisateur a mis un nombre trop grand pour le month
     else: # all other months without December
-        pass
+        if day < 31 and day > 0: # traite le cas des jours en-desous de 31
+            day += 1
+            flag = True
+        elif day == 31: # traite le cas du 31
+            day = 1
+            month = 1
+            year += 1
+            flag = True
+        else :
+            flag = False # utilisateur mauvais jour
 else: # the february month
     pass
 
