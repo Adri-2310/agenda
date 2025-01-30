@@ -53,7 +53,15 @@ if month != 2:  # all other months without february
 
 elif month == 2:  # the february month
     if year % 4 == 0 and year % 100 == 0 and year % 400 == 0:  # année bisextille
-        pass
+        if day < 29 and day > 0:  # jour entre 0 et 28
+            day += 1
+            flag = True
+        elif day == 29:  # jour 28
+            day = 1
+            month += 1
+            flag = True
+        else:  # mauvais jour entrez
+            flag = False
     else:  # année non bisextille
         if day < 28 and day > 0:  # jour entre 0 et 28
             day += 1
