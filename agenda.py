@@ -89,7 +89,7 @@ else:
                 flag_day = True  # Invalid day flag
     else:
         flag_end = False  # Stop execution
-        flag_day = True  # Invalid month flag
+        flag_month = True  # Invalid month flag
 
 # display results or errors
 if flag_end:
